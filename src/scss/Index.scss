@@ -1,0 +1,32 @@
+@import "_settings";
+@import "_animations.scss";
+@import "_header.scss";
+@import "_content.scss";
+@import "_aside.scss";
+
+
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#root {
+    overflow: hidden;
+    height: 100vh;
+    padding: $root-padding;
+}
+
+.App {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 2fr repeat(3, 3fr);
+}
+
+.content,
+header,
+aside {
+    margin: 7px;
+    border-radius: 7px;
+}

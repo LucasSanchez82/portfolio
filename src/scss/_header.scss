@@ -1,0 +1,61 @@
+.image-lucas {
+    width: 10vw;
+    min-width: 120px;
+    background-image: url("/images/image-lucas.jpg");
+    background-repeat: no-repeat;
+    background-size: 236px;
+    background-position: center;
+}
+
+header {
+    text-transform: uppercase;
+    overflow: hidden;
+    background-color: $header-background-color;
+    grid-column: 2 / 5;
+    display: flex;
+    font-size: 2rem;
+
+    >section {
+
+        margin: auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        .animation {
+            height: 50px;
+            overflow: hidden;
+            margin-left: 1rem;
+            border-radius: 7px;
+        }
+
+        .animation>div>div {
+            padding: 0.25rem 0.75rem;
+            height: 2.81rem;
+            margin-bottom: 2.81rem;
+            display: inline-block;
+            border-radius: 7px;
+        }
+
+        .animation div:first-child {
+            height: $header-div-text-height;
+            margin-bottom: $header-div-text-margin;
+            padding: $header-div-text-padding;
+            animation: text-animation 8s infinite;
+        }
+
+
+        .first div {
+            background-color: #20a7d8;
+        }
+
+        .second div {
+            background-color: #CD921E;
+        }
+
+        .third div {
+            background-color: #c10528;
+        }
+    }
+}

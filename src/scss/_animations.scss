@@ -1,0 +1,113 @@
+$temps-aside: 1.5s;
+$temps-header: 1.5s;
+$temps-content: 4s;
+$header-text-animation-value: calc(-1*($header-div-text-height + $header-div-text-margin + ($header-div-text-padding*2)));
+
+aside {
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    animation: slide-top-to-bottom $temps-aside forwards;
+    -webkit-animation: slide-top-to-bottom $temps-aside forwards;
+}
+
+header {
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    animation: slide-right-to-left $temps-header forwards;
+    -webkit-animation: slide-right-to-left $temps-header forwards;
+}
+
+.content {
+    transform: scale(0%);
+    -webkit-transform: scale(0%);
+    animation: scale-to-max $temps-content forwards;
+    -webkit-animation: scale-to-max $temps-content -2.25s forwards;
+}
+
+@-webkit-keyframes scale-to-max {
+    50% {
+        -webkit-transform: scale(0);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes scale-to-max {
+    75% {
+        transform: scale(0);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide-right-to-left {
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@-webkit-keyframes slide-right-to-left {
+    100% {
+        -webkit-transform: translateX(0%);
+    }
+}
+
+@keyframes slide-top-to-bottom {
+    100% {
+        transform: translate(0%);
+    }
+}
+
+@-webkit-keyframes slide-top-to-bottom {
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+// header
+@keyframes text-animation {
+    0% {
+        margin-top: 0;
+    }
+
+    10% {
+        margin-top: 0;
+    }
+
+    20% {
+        margin-top: $header-text-animation-value;
+    }
+
+    30% {
+        margin-top: $header-text-animation-value;
+    }
+
+    40% {
+        margin-top: calc($header-text-animation-value*2);
+    }
+
+    60% {
+        margin-top: calc($header-text-animation-value*2);
+    }
+
+    70% {
+        margin-top: $header-text-animation-value;
+    }
+
+    80% {
+        margin-top: $header-text-animation-value;
+    }
+
+    90% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
