@@ -1,0 +1,115 @@
+.content {
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 0.75em;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgb(202, 184, 223);
+        border-radius: 7px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .timeline {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 60px;
+        // background: #d6d6d6;
+    }
+
+    .timeline:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+        width: 8px;
+        background: #346abf;
+        border-radius: 3px;
+        z-index: 1;
+    }
+
+    .timeline section {
+        position: relative;
+        background: #eeeeee;
+        width: calc(50% - 40px);
+        padding: 15px;
+    }
+
+    .timeline section+section {
+        margin-top: 20px;
+    }
+
+    .timeline section:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: calc(100% + 26px);
+        background: #d6d6d6;
+        width: 24px;
+        height: 24px;
+        border: 6px #346abf solid;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .timeline section:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-left: 16px solid #eeeeee;
+        border-bottom: 20px solid transparent;
+    }
+
+    .timeline section:nth-child(even) {
+        margin-left: calc(50% + 48px);
+    }
+
+    .timeline section:nth-child(even):before {
+        left: auto;
+        right: calc(100% + 26px);
+    }
+
+    .timeline section:nth-child(even):after {
+        left: auto;
+        right: 100%;
+        border-left: none;
+        border-right: 16px solid #eeeeee;
+    }
+
+    .timeline section ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .timeline section li {
+        list-style: none;
+        padding: 8px 0;
+    }
+
+    .timeline section li:not(:last-child) {
+        border-bottom: 1px #aaa solid;
+    }
+
+    .timeline section li span {
+        display: inline-block;
+        width: 70px;
+        color: #346abf;
+    }
+}
