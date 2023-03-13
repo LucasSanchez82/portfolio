@@ -1,7 +1,26 @@
-$temps-aside: 1.5s;
-$temps-header: 1.5s;
-$temps-content: 4s;
+$temps-aside: 1s;
+$temps-header: 1s;
+$temps-content: 1s;
+$start-content: 0.65s;
 $header-text-animation-value: calc(-1*($header-div-text-height + $header-div-text-margin + ($header-div-text-padding*2)));
+
+.Mon-cv {
+    position: relative;
+    top: -100%;
+    animation: load-content-mon-cv 2s forwards;
+}
+
+.A-propos-de-moi {
+    position: relative;
+    top: -100%;
+    animation: load-content-a-propos 2s forwards;
+}
+
+.timeline {
+    position: relative;
+    top: 200%;
+    animation: load-content-a-propos 2s forwards;
+}
 
 aside {
     transform: translateY(-100%);
@@ -13,33 +32,24 @@ aside {
 header {
     transform: translateX(200%);
     -webkit-transform: translateX(200%);
-    animation: slide-right-to-left $temps-header forwards;
-    -webkit-animation: slide-right-to-left $temps-header forwards;
+    animation: slide-right-to-left $temps-header forwards calc($temps-aside /5);
+    -webkit-animation: slide-right-to-left $temps-header forwards calc($temps-aside /5);
 }
 
 .content {
-    transform: scale(0%);
-    -webkit-transform: scale(0%);
-    animation: scale-to-max $temps-content forwards;
-    -webkit-animation: scale-to-max $temps-content -2.25s forwards;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    animation: scale-to-max $temps-content forwards $start-content;
+    -webkit-animation: scale-to-max $temps-content forwards $start-content;
 }
 
 @-webkit-keyframes scale-to-max {
-    50% {
-        -webkit-transform: scale(0);
-    }
-
     100% {
         -webkit-transform: scale(1);
     }
 }
 
 @keyframes scale-to-max {
-    75% {
-        transform: scale(0);
-
-    }
-
     100% {
         transform: scale(1);
     }
@@ -109,5 +119,23 @@ header {
 
     100% {
         margin-top: 0;
+    }
+}
+
+@keyframes load-content-a-propos {
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes load-content-mon-cv {
+    100% {
+        top: 0%;
+    }
+}
+
+@keyframes load-content-timeline {
+    100% {
+        top: 0%;
     }
 }

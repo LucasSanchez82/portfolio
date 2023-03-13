@@ -1,0 +1,34 @@
+.Mon-cv,
+.A-propos-de-moi {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    section {
+        width: 80%;
+        border-radius: 7px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            text-align: justify;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 5%;
+            margin-bottom: 5px;
+            border-bottom: 3px solid #4d78af;
+        }
+
+        &:not(:first-child) {
+            padding-top: 5%;
+            margin-top: 5px;
+            border-top: 3px solid #4d78af;
+        }
+    }
+
+
+}

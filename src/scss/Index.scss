@@ -4,6 +4,7 @@
 @import "_content.scss";
 @import "_aside.scss";
 @import "_timeline.scss";
+@import "_cv&a-propos.scss";
 
 
 * {
@@ -12,6 +13,7 @@
 }
 
 #root {
+    background-color: $root-background-color;
     overflow: hidden;
     height: 100vh;
     padding: $root-padding;
