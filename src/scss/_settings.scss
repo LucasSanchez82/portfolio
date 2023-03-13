@@ -1,4 +1,4 @@
-$root-padding: 4vh;
+$root-padding: 1vw;
 $root-background-color: #333143;
 
 $aside-background-color: #59598c;
@@ -8,3 +8,31 @@ $header-background-color: #8888bc;
 $header-div-text-height: 50px;
 $header-div-text-margin: 0px;
 $header-div-text-padding: 0px;
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#root {
+    background-color: $root-background-color;
+    overflow: hidden;
+    height: 100vh;
+    padding: $root-padding;
+    font-size: calc(14px + (20 - 14) * ((100vw - 600px) / (1600)));
+
+}
+
+.App {
+    overflow: hidden;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 2fr repeat(3, 3fr);
+}
+
+.content,
+header,
+aside {
+    margin: 7px;
+    border-radius: 7px;
+}

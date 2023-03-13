@@ -1,0 +1,41 @@
+@media screen and (max-width: 786px) {
+    .App {
+        aside {
+
+            z-index: 1;
+            margin: 0;
+            height: 100%;
+            width: 40vw;
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            .hamburger-react {
+                height: 50px;
+                z-index: 2;
+            }
+
+            ul {
+                width: 100%;
+                height: 100%;
+                margin: auto;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+
+        header,
+        .content {
+            grid-column: 1 / 5;
+        }
+    }
+}
+
+@media screen and (min-width: 786px) {
+    .hamburger-react {
+        display: none;
+    }
+}

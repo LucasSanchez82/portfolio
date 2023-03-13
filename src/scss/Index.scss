@@ -5,30 +5,4 @@
 @import "_aside.scss";
 @import "_timeline.scss";
 @import "_cv&a-propos.scss";
-
-
-* {
-    margin: 0px;
-    box-sizing: border-box;
-}
-
-#root {
-    background-color: $root-background-color;
-    overflow: hidden;
-    height: 100vh;
-    padding: $root-padding;
-}
-
-.App {
-    overflow: hidden;
-    height: 100%;
-    display: grid;
-    grid-template: repeat(4, 1fr) / 2fr repeat(3, 3fr);
-}
-
-.content,
-header,
-aside {
-    margin: 7px;
-    border-radius: 7px;
-}
+@import "responsive.scss";

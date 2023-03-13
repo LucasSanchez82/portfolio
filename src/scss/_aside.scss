@@ -28,11 +28,14 @@ aside {
             align-content: center;
 
             a {
-                height: 30px;
-                margin: auto;
+
+                height: 100%;
+                width: 100%;
                 text-decoration: none;
                 color: white;
-
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 
@@ -46,7 +49,7 @@ aside {
 
         li:hover {
             border-radius: 7px;
-            margin: 10px;
+            transform: scale(0.9);
         }
     }
 }
